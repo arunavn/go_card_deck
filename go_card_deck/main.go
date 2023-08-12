@@ -7,8 +7,9 @@ func main() {
 	// card := newCard()
 	// fmt.Println(card)
 	// cards = append(cards, "Six of Spades")
-	// cards := newDeck()
-	cards := newDeckFromFile("test.txt")
+	cards := newDeck()
+	cards.saveToFile("test.txt")
+	cards = newDeckFromFile("test.txt")
 	// cards.saveToFile("test.txt")
 
 	// for _, x := range cards {
@@ -16,7 +17,7 @@ func main() {
 	// }
 	cards.print()
 	cards.shuffleDeck()
-	fmt.Println("Hand................................")
+	fmt.Println("Shuffle................................")
 	cards.print()
 	// fmt.Println("Hand................................")
 	// hand, remainingCards := deal(cards, 4)
